@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Use svg polyfill for ie11 or insert js to remove svg icons in ie11.
+ */
+function shortcode_svg_page_attachments(array &$attachments) {
+  $config = \Drupal::service('config.factory')->getEditable('shortcode_svg.settings');
+  if ($config->get('polyfill') && file_exists(DRUPAL_ROOT . '/libraries/svgxuse/svgxuse.min.js')) {
+    $attachments['#attached']['library'][] = 'shortcode_svg/polyfill';
+  }
+}
+

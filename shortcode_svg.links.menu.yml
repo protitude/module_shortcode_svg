@@ -1,0 +1,5 @@
+shortcode_svg.menu_config:
+  title: 'Shortcode svg sprite'
+  description: 'Configure shortcode SVG icon sprite'
+  parent: system.admin_config_content
+  route_name: shortcode_svg.config

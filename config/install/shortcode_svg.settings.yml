@@ -1,0 +1,5 @@
+icon: ''
+image: ''
+colors: "black: 000\r\nwhite: fff\r\nnear-white: f2f2f2\r\ngray-lightest: e5e5e5\r\ngray-lighter: ccc\r\ngray-light: 888\r\ngray: 666\r\ngray-dark: 424242\r\ngray-darker: 333\r\ngold: CFB87C\r\nblue: 0073E6\r\nblue-active: 2E96FF\r\nred: 6A0404\r\nred-active: 8a3131"
+width: '40'
+polyfill: '0'

@@ -1,0 +1,10 @@
+name: 'Shortcode SVG'
+type: module
+description: 'Upload and use an SVG image sprite in a shortcode'
+dependencies:
+  - shortcode:shortcode
+package: 'Input filters'
+
+core: '8.x'
+core_version_requirement: ^8 || ^9
+configure: shortcode_svg.config

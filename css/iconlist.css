@@ -1,0 +1,49 @@
+svg {
+  width: 50px;
+}
+.svg_list {
+  float: left;
+  padding: 0 0 25px 0;
+}
+.svg_list li {
+  float: left;
+  list-style: none;
+  padding: 0 5px;
+}
+#drupal-off-canvas li:not(.selected) use {
+  fill: #fff;
+}
+#drupal-off-canvas .svg-color {
+  color: black;
+  border: 1px solid grey;
+  background: white;
+}
+#drupal-off-canvas .copy-icon {
+    color: buttontext;
+    display: inline-block;
+    align-items: flex-start;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 11px system-ui;
+    padding: 1px 7px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-image: initial;
+}
+#drupal-off-canvas .svg_list {
+  margin-bottom: 50px;
+}
+#drupal-off-canvas .svg_list li {
+  cursor: pointer;
+  margin: 0 10px;
+}
+#drupal-off-canvas .fixed-bottom {
+  position: fixed;
+  background: #fff;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+  width: 380px;
+}

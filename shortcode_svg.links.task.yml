@@ -1,0 +1,8 @@
+shortcode_svg.tab_config:
+  route_name: shortcode_svg.config
+  title: Config
+  base_route: shortcode_svg.config
+shortcode_svg.tab_list:
+  route_name: shortcode_svg.list
+  title: List
+  base_route: shortcode_svg.config

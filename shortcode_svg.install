@@ -1,0 +1,23 @@
+<?php
+
+use Drupal\Core\File\FileSystemInterface;
+
+/**
+ * @file
+ * Install, update and uninstall functions for the shortcode_svg_initialize module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function shortcode_svg_install() {
+  $shortcode_svg_path = drupal_get_path('module', 'shortcode_svg');
+  // Save current SVG image to files directory.
+  $data = file_get_contents($shortcode_svg_path  . "/image/sprite.svg");
+  $file = file_save_data($data, "public://svg/sprite.svg", FileSystemInterface::EXISTS_REPLACE);
+  // Set form default to uploaded svg.
+  $config = \Drupal::service('config.factory')->getEditable('shortcode_svg.settings');
+  $config->set('image', $file->id());
+  $config->save();
+}
+

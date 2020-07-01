@@ -1,0 +1,14 @@
+shortcode_svg.config:
+  path: '/admin/config/content/shortcode_svg'
+  defaults:
+    _form: '\Drupal\shortcode_svg\Form\ShortcodeSvg'
+    _title: 'Svg Config'
+  requirements:
+    _permission: 'Administer content'
+shortcode_svg.list:
+  path: '/admin/config/content/shortcode_svg/svg_list'
+  defaults:
+    _controller: '\Drupal\shortcode_svg\Controller\ShortcodeSvgController::content'
+    _title: 'Svg Icons'
+  requirements:
+    _permission: 'Use the Rich Text text format'

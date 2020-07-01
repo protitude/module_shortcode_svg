@@ -1,0 +1,17 @@
+icon_form:
+  js:
+    js/iconlist.js: {}
+  css:
+    theme:
+      css/iconlist.css: {}
+clipboard:
+  js:
+    js/clipboard.js: {}
+polyfill:
+  remote: https://github.com/javan/details-element-polyfill
+  version: 2.4.0
+  license:
+    name: MIT
+    gpl-compatible: false
+  js:
+    /libraries/svgxuse/svgxuse.min.js: { minified: true }
