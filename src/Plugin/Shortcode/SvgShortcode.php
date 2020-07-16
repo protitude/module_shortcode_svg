@@ -4,6 +4,7 @@ namespace Drupal\shortcode_svg\Plugin\Shortcode;
 
 use Drupal\Core\Language\Language;
 use Drupal\shortcode\Plugin\ShortcodeBase;
+use Drupal\shortcode_svg\Plugin\ShortcodeIcon;
 use Drupal\Component\Utility\Xss;
 
 /**
@@ -11,7 +12,7 @@ use Drupal\Component\Utility\Xss;
  *
  * @Shortcode(
  *   id = "svg",
- *   title = @Translation("Svg Shortsheets"),
+ *   title = @Translation("Svg Shortcode"),
  *   description = @Translation("Svg shortcode")
  * )
  */
@@ -43,10 +44,8 @@ class SvgShortcode extends ShortcodeBase {
       $width = !empty($attributes['width'])?Xss::filter($attributes['width']):null;
       $color = !empty($attributes['color'])?Xss::filter($attributes['color']):null;
 
-      $config = \Drupal::config('shortcode_svg.settings');
-      $fid = $config->get('image');
-      $file = \Drupal\file\Entity\File::load($fid);
-      $path = file_url_transform_relative(file_create_url($file->getFileUri()));
+      $icon = new ShortcodeIcon();
+      $path = $icon->getSvg();
 
       $content = sprintf(
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" %s class="svg-icon %s" width="%s">
