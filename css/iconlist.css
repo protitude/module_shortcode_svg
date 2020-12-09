@@ -11,7 +11,7 @@ svg {
   padding: 0 5px;
 }
 #drupal-off-canvas li:not(.selected) use {
-  fill: #fff;
+  fill: #000;
 }
 #drupal-off-canvas .svg-color {
   color: black;
